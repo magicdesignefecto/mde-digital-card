@@ -1339,10 +1339,11 @@
 
         function shareProfile() {
             playClickSound();
+            const shareUrl = 'https://magicdesignefecto.github.io/mde-digital-card/?v=2';
             if (navigator.share) {
-                navigator.share({ title: 'Magic Design Efecto', text: 'Te comparto el contacto de Magic Design Efecto:', url: window.location.href }).catch(console.error);
+                navigator.share({ title: 'Magic Design Efecto', text: 'Te comparto el contacto de Magic Design Efecto:', url: shareUrl }).catch(console.error);
             } else {
-                navigator.clipboard.writeText(window.location.href);
+                navigator.clipboard.writeText(shareUrl);
                 alert('Enlace copiado al portapapeles');
             }
         }
